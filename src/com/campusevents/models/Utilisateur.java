@@ -8,4 +8,7 @@ public class Utilisateur {
         this.nom = nom;
         this.email = email;
     }
+    public void sInscrire() {
+        System.out.println(nom + " est inscrit avec email " + email);
+    }
 }
