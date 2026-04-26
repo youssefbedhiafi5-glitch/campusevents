@@ -11,4 +11,7 @@ public class Utilisateur {
     public void sInscrire() {
         System.out.println(nom + " est inscrit avec email " + email);
     }
+    public void seConnecter() {
+        System.out.println(nom + " est connecté");
+    }
 }
