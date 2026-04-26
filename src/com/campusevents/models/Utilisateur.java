@@ -13,5 +13,13 @@ public class Utilisateur {
     }
     public void seConnecter() {
         System.out.println(nom + " est connecté");
+    }                     
+    public void modifierProfil(String nouveauNom) {
+    if (nouveauNom == null || nouveauNom.isEmpty()) {
+        System.out.println("Nom invalide !");
+    } else {
+        this.nom = nouveauNom;
+        System.out.println("Nom modifié avec succès !");
     }
+}
 }
