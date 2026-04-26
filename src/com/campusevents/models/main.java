@@ -2,7 +2,7 @@ package com.campusevents.models;
 
 import java.util.ArrayList;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
         // 1. Organisateur
