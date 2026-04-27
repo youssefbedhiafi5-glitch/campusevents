@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("=== Campus Events — Sprint 2 ===");
+
         // 1. Organisateur
         Organisateur org = new Organisateur("Ali", "ali@mail.com");
         org.creerEvenement();
@@ -35,5 +37,22 @@ public class Main {
         // 7. Admin
         Administrateur admin = new Administrateur();
         admin.validerEvenement(ev1);
+
+        System.out.println("\n=== Test Evenement (Malak) ===");
+
+        ev1.afficherDetails();
+
+        // Modification
+        ev1.modifierEvenement("Workshop Java", "Salle B");
+
+        // Annulation
+        ev1.annulerEvenement();
+
+        // Test important : modification après annulation
+        ev1.modifierEvenement("Test", "Salle C");
+
+        // Affichage final
+        ev1.afficherDetails();
     }
 }
+
