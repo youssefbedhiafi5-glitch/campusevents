@@ -5,32 +5,36 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        feature/search
         System.out.println("=== Campus Events — Démonstration Finale ===");
 
         // =========================
-        // 1. Organisateur
-        // =========================
+
+        System.out.println("=== Campus Events — Sprint 2 ===");
+
+        main
+        
         Organisateur org = new Organisateur("Ali", "ali@mail.com");
         org.creerEvenement();
 
-        // =========================
+        
         // 2. Création événements
-        // =========================
+        
         Evenement ev1 = new Evenement("Hackathon", "2026-05-10", "ESPRIT");
         Evenement ev2 = new Evenement("Stage Info", "2026-06-01", "INSAT");
         Evenement ev3 = new Evenement("Football Match", "2026-07-01", "ESPRIT");
 
-        // =========================
+        
         // 3. Liste événements
-        // =========================
+        
         ArrayList<Evenement> liste = new ArrayList<>();
         liste.add(ev1);
         liste.add(ev2);
         liste.add(ev3);
 
-        // =========================
+        
         // 4. Recherche (Youssef)
-        // =========================
+        
         Recherche r = new Recherche();
 
         System.out.println("\n🔍 Recherche par titre 'Hack':");
@@ -93,11 +97,31 @@ public class Main {
         Administrateur admin = new Administrateur();
 
         admin.validerEvenement(ev1);
+        feature/search
         admin.supprimerEvenement(ev2);
         admin.bloquerUtilisateur(user);
 
         admin.afficherStats(5, 3);
 
         System.out.println("\n=== Fin démonstration ===");
+
+
+        System.out.println("\n=== Test Evenement (Malak) ===");
+
+        ev1.afficherDetails();
+
+        // Modification
+        ev1.modifierEvenement("Workshop Java", "Salle B");
+
+        // Annulation
+        ev1.annulerEvenement();
+
+        // Test important : modification après annulation
+        ev1.modifierEvenement("Test", "Salle C");
+
+        // Affichage final
+        ev1.afficherDetails();
+        main
     }
 }
+
